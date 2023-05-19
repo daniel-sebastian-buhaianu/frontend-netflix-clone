@@ -1,0 +1,146 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	color: white;
+}
+
+html {
+	font-family: sans-serif;
+}
+
+body {
+	background: black;
+	color: white;
+}
+
+section, footer {
+	padding: 2rem;
+}
+
+section {
+	border: 0.5rem solid #8080804a;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	text-align: center;
+}
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	background: black;
+}
+
+nav > p {
+	color: rgb(229,9,20);
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+.sign-in-btn {
+	text-decoration: none;
+	padding: 0.5rem 1rem;
+	background-color: rgb(229,9,20);
+	font-size: 0.8em;
+	font-weight: bold;
+	border-radius: 0.25rem;
+}
+
+.section-text-wrapper {
+	margin-top: 1rem;
+}
+
+#hero > .section-text-wrapper {
+	margin-top: 3rem;
+}
+
+.section-text-wrapper > h1 {
+	font-size: 1.7em;
+}
+
+.section-text-wrapper > p {
+	margin-top: 1rem;
+}
+
+.ready-to-watch {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	padding: 0 1.5rem;
+	margin-top: 1.5rem;
+}
+
+.ready-to-watch > form > * {
+	margin-top: 1rem;
+}
+
+.ready-to-watch input#email {
+	width: 90%;
+	padding: 0.75rem;
+	background-color: transparent;
+	color: white;
+	border: 1px solid #ffffff6b;
+	border-radius: 0.25rem;
+	font-size: 1em;
+}
+
+.ready-to-watch input#email:focus-visible {
+	outline: 1px solid white;
+}
+
+.ready-to-watch > form > button {
+	display: flex;
+	justify-content: center;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0.75rem 1rem 0.5rem 1rem;
+	font-size: 1.1em;
+	font-weight: bold;
+	color: white;
+	background-color: rgb(229,9,20);
+	border: 0;
+	border-radius: 0.25rem;
+}
+
+.benefits > img {
+	width: 100%;
+	margin-top: 1rem;
+}
+
+#questions-wrapper > button {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	margin-top: 0.5rem;	
+	padding: 1rem;
+	border: 0;
+	font-size: 1.1em;
+	background-color: #8080804a;
+	color: white;
+	cursor: pointer;
+}
+
+#questions-wrapper > button > svg {
+	height: 15px;
+}
+
+#questions-wrapper {
+	margin-top: 2rem;
+}
+
+footer, footer > ul > li > a {
+	color: #ffffffa3;
+}
+
+footer ul {
+	list-style: none;
+	margin-top: 2rem;
+}
+
+footer ul li {
+	margin-bottom: 1rem;
+	font-size: 0.9em;
+}
