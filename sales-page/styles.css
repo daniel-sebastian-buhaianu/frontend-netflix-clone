@@ -1,6 +1,7 @@
 * {
 	padding: 0;
 	margin: 0;
+	letter-spacing: 0 !important;
 }
 
 a {
@@ -31,12 +32,11 @@ section {
 nav {
 	display: flex;
 	justify-content: space-between;
-	background: black;
 }
 
 nav > p {
 	color: rgb(229,9,20);
-	font-size: 1.5em;
+	font-size: 2em;
 	font-weight: bold;
 }
 
@@ -44,8 +44,7 @@ nav > p {
 	text-decoration: none;
 	padding: 0.5rem 1rem;
 	background-color: rgb(229,9,20);
-	font-size: 0.8em;
-	font-weight: bold;
+	font-size: 0.9em;
 	border-radius: 0.25rem;
 }
 
@@ -58,10 +57,11 @@ nav > p {
 }
 
 .section-text-wrapper > h1 {
-	font-size: 1.7em;
+	font-size: 2em;
 }
 
 .section-text-wrapper > p {
+	font-size: 1.1em;
 	margin-top: 1rem;
 }
 
@@ -69,7 +69,7 @@ nav > p {
 	display: flex;
 	flex-direction: column;
 	text-align: center;
-	padding: 0 1.5rem;
+	padding: 0 2rem;
 	margin-top: 1.5rem;
 }
 
@@ -107,6 +107,7 @@ nav > p {
 
 .benefits > img {
 	width: 100%;
+	height: 50%;
 	margin-top: 1rem;
 }
 
@@ -125,11 +126,32 @@ nav > p {
 
 #questions-wrapper > button > svg {
 	height: 15px;
+  transition: all 0.3s ease-in-out;
 }
 
 #questions-wrapper {
 	margin-top: 2rem;
 }
+
+.faq-answer {
+	background-color: #8080804a;
+	text-align: left;
+	padding: 0 1rem;
+	margin-top: 1px;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.3s ease-in-out;
+}
+
+.active > svg {
+  rotate: 45deg;
+}
+
+.active + .faq-answer {
+  max-height: 100px; /* Adjust this value to fit your content */
+  padding: 1rem;
+}
+
 
 footer, footer > ul > li > a {
 	color: #ffffffa3;
