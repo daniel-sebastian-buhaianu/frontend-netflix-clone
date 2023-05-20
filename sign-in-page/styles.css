@@ -1,7 +1,15 @@
+html {
+  box-sizing: border-box;
+}
+
 * {
 	margin: 0;
 	padding: 0;
 	font-family: sans-serif;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
 body {
@@ -14,45 +22,87 @@ a {
 	color: white;
 }
 
-header {
-	margin: 1rem 0.5rem;
+a:hover {
+	text-decoration: underline;
 }
 
-nav #logo {
+main {
+	border: 1px solid #ffffff6b;
+	border-left: 0;
+	border-top: 0;
+	border-right: 0;
+	height: 580px;
+}
+
+@media (min-width: 441px) {
+	main {
+		height: 600px;
+	}
+}
+
+@media (min-width: 740px) {
+	main {
+		background-color: #313131;
+		height: 825px;
+		border: 0;
+	}
+}
+
+main > .container {
+	width: 90%;
+	margin: 0 auto;
+	padding-top: 0.5rem;
+}
+
+@media (min-width: 740px) {
+	main > .container > .container {
+		width: 450px;
+		height: 650px;
+		margin: 1rem auto;
+		padding: 2rem 4rem;
+		background-color: #0000009e;
+	}
+}
+
+#logo {
 	font-size: 20px;
 	font-weight: bold;
 	color: #e50914;
 }
 
-main {
-	padding: 1rem;
-	border: 1px solid #ffffff6b;
-	border-left: 0;
-	border-top: 0;
-	border-right: 0;
+#logo:hover {
+	text-decoration: none;
 }
 
-main > h1 {
+@media (min-width: 441px) {
+	#logo {
+		font-size: 40px;
+	}
+}
+
+main .container > h1 {
 	font-weight: normal;
+	margin-top: 1.5rem;
 }
 
-main > form {
+main .container > form {
 	margin-top: 0.5rem;
 	display: flex;
 	flex-direction: column;
+	width: 100%;
 }
 
-.form-input {
+main .form-input {
 	margin-top: 0.5rem;
 }
 
-.form-input.core {
+main .form-input.core {
 	position: relative;
 	margin-top: 1rem;
 }
 
-.form-input.core > input {
-	width: 90%;
+main .form-input.core > input {
+	width: 100%;
 	padding: 1.3rem 1rem 1rem 1rem;
 	background-color: #80808070;
 	border: 0;
@@ -62,6 +112,7 @@ main > form {
 	color: white;
 	font-size: 1em;
 }
+
 .form-input.core > input:-webkit-autofill {
 	-webkit-box-shadow: 0 0 0 30px #5b5959 inset !important;
 }
@@ -74,14 +125,15 @@ main > form {
 	position: absolute;
 	color: #ffffff70;
 	font-size: 0.9em;
-	top: 30%;
-	left: 5%;
+	top: 20px;
+	left: 20px;
 	transition: all 0.1s linear;
 }
 
 .form-input.core.focused > label {
 	font-size: 0.6em;
-	top: 15%;
+	top: 10px;
+	left: 15px;
 }
 
 .form-input.submit {
@@ -104,7 +156,7 @@ main > form {
   position: relative;
   padding-left: 1.5rem;
   cursor: pointer;
-  font-size: 0.9em;
+  font-size: 0.8em;
   color: #ffffffa8;
 }
 
@@ -122,10 +174,11 @@ main > form {
   position: absolute;
   top: 0;
   left: 0;
-  height: 20px;
-  width: 20px;
+  height: 19px;
+  width: 19px;
   background-color: #808080a8;
   border-radius: 0.25rem;
+  box-sizing: initial;
 }
 
 /* On mouse-over, add a grey background color */
@@ -154,39 +207,69 @@ main > form {
 .checkbox-container .checkmark:after {
   left: 6px;
   top: 1px;
-  width: 5px;
-  height: 10px;
+  width: 4px;
+  height: 9px;
   border: solid white;
   border-width: 0 3px 3px 0;
   transform: rotate(45deg);
 }
 
-a#need-help {
-	font-size: 0.9em;
+main a#need-help {
+	font-size: 0.8em;
 	float: right;
 	color: #ffffffa8;
 }
 
-main > article {
+main .container > article {
 	margin-top: 1rem;
 }
 
-article#new-to {
+main article#new-to {
 	color: #ffffff6b;
 }
 
-article#google-recaptcha {
-	font-size: 0.8em;
-	color: #ffffff91;
-	margin-bottom: 5rem;
+@media (min-width: 419px) {
+	main article#new-to {
+		margin-top: 2rem;
+	}
 }
 
-article#google-recaptcha a {
+@media (min-width: 527px) {
+	main article#new-to {
+		margin-top: 3rem;
+	}
+}
+
+@media (min-width: 614px) {
+	main article#new-to {
+		margin-top: 4rem;
+	}
+}
+
+@media (min-width: 688px) {
+	main article#new-to {
+		margin-top: 5rem;
+	}
+}
+
+main article#google-recaptcha {
+	font-size: 0.8em;
+	color: #ffffff91;
+}
+
+main article#google-recaptcha a {
 	color: #0071eb;
 }
 
 footer {
-	padding: 1rem;
+	width: 90%;
+	margin: 2rem auto;
+}
+
+@media (min-width: 1150px) {
+	footer {
+		width: 1000px;
+	}
 }
 
 footer,
@@ -195,7 +278,7 @@ footer a {
 }
 
 footer a {
-	font-size: 0.9em;
+	font-size: 0.8em;
 }
 
 footer > article {
@@ -203,18 +286,33 @@ footer > article {
 }
 
 footer article#phone-number {
-	font-size: 1.1em;
+	font-size: 1em;
 }
 
 footer ul {
 	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 footer ul li {
-	margin-top: 0.5rem;
+	margin-top: 1rem;
+	width: 50%;
+}
+
+@media (min-width: 501px) {
+	footer ul li {
+		width: 33%;
+	}
+}
+
+@media (min-width: 741px) {
+	footer ul li {
+		width: 25%;
+	}
 }
 
 footer article#copyright {
 	text-align: center;
-	margin-top: 1rem;
+	margin-top: 2rem;
 }
