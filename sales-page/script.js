@@ -1,4 +1,4 @@
-const accordion = () => {
+const Accordion = () => {
 
   const accordionButtons = document.querySelectorAll('.accordion-button');
 
@@ -20,4 +20,4 @@ const accordion = () => {
   }
 };
 
-accordion();
+Accordion();
