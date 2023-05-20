@@ -1,0 +1,192 @@
+/* =============== LOGO ===============*/
+
+.logo {
+	color: rgb(229,9,20);
+	font-size: 32px;
+	font-weight: bold;
+}
+
+/* =============== BUTTON ===============*/
+
+.btn {
+	padding: 0.5rem 1rem;
+	border-radius: 0.25rem;
+	background-color: rgb(229,9,20);
+	cursor: pointer;
+	text-decoration: none;
+	color: white;
+	transition-duration: 250ms;
+	transition-property: background-color, border-color;
+	transition-timing-function: cubic-bezier(0.9, 0, 0.51, 1);
+}
+
+.btn:hover {
+	background-color: rgb(193,17,25);
+	transition-timing-function: cubic-bezier(0.5, 0, 0.1, 1);
+}
+
+/* =============== TEXT CONTAINER ===============*/
+
+.text-container {
+	margin-top: 1rem;
+}
+
+.text-container > h1 {
+	font-size: 2em;
+}
+
+.text-container > p {
+	margin-top: 1rem;
+	font-size: 1.1em;
+}
+
+/* =============== CALL TO ACTION ===============*/
+
+.call-to-action {
+	display: flex;
+	flex-direction: column;
+	max-width: 600px;
+	padding: 0 2rem;
+	margin-top: 1.5rem;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+.call-to-action > form > * {
+	margin-top: 1rem;
+}
+
+.call-to-action > form > input {
+	width: 90%;
+	padding: 0.75rem;
+	border: 1px solid #ffffff6b;
+	border-radius: 0.25rem;
+	background-color: transparent;
+	color: white;
+	font-size: 1em;
+}
+
+.call-to-action > form > input:focus-visible {
+	outline: 1px solid white;
+}
+
+.call-to-action > form > button {
+	display: flex;
+	justify-content: center;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0.75rem 1rem 0.5rem 1rem;
+	border: 0;
+	font-size: 1.1em;
+	font-weight: bold;
+}
+
+.call-to-action > form > button > span:first-child {
+	width: 100%;
+}
+
+.call-to-action > form > button:hover {
+	background-color: rgb(193,17,25);
+	transition-timing-function: cubic-bezier(0.5, 0, 0.1, 1);
+}
+
+@media (min-width: 600px) {
+
+	.call-to-action {
+		margin-bottom: 2rem;
+		padding: 0 3rem;
+	}
+
+	.call-to-action > form {
+		display: flex;
+		justify-content: center;
+	}
+
+	.call-to-action > form > button {
+		min-width: 200px;
+		margin-left: 0.5rem;
+		font-size: 1.6em;
+		font-weight: normal;
+	}
+
+	.call-to-action > form > button svg {
+		margin-top: 5px;
+	}
+}
+
+@media (min-width: 960px) {
+
+	.call-to-action {
+		max-width: 730px;
+	}
+
+	.call-to-action > form {
+		padding: 0 1.5rem;
+	}
+
+	.call-to-action > form > button {
+		font-size: 1.2em;
+	}
+}
+
+/* =============== ACCORDION ===============*/
+
+.accordion-button {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	margin-top: 0.5rem;	
+	padding: 1rem;
+	border: 0;
+	background-color: #8080804a;
+	font-size: 1.1em;
+	color: white;
+	cursor: pointer;
+	transition-duration: 250ms;
+	transition-property: background-color;
+	transition-timing-function: cubic-bezier(0.9, 0, 0.51, 1);
+}
+
+.accordion-button:hover {
+	transition-timing-function: cubic-bezier(0.5, 0, 0.1, 1);
+	background-color: rgba(78, 78, 78, 1);
+}
+
+.accordion-button > svg {
+	height: 15px;
+  transition: all 0.25s cubic-bezier(0.5, 0, 0.1, 1);
+}
+
+@media (min-width: 960px) {
+
+	.accordion-button {
+		padding: 1.5rem;
+		font-size: 1.2em;
+	}
+
+	.accordion-button > svg {
+		height: 25px;
+	}
+}
+
+.accordion-body {
+	max-height: 0;
+	margin-top: 1px;
+	padding: 0 1rem;
+	overflow: hidden;
+	background-color: #8080804a;
+	text-align: left;
+	transition: all 0.25s cubic-bezier(0.5, 0, 0.1, 1);
+}
+
+.active > svg {
+  rotate: 45deg;
+}
+
+.active + .accordion-body {
+  max-height: 100px; /* Adjust this value to fit your content */
+  padding: 1rem;
+}
+
+/* =============== THE END ===============*/
