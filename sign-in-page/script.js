@@ -1,4 +1,6 @@
-const coreInputs = Array.from( document.getElementsByClassName( 'form-input core' ) );
+const coreInputs = Array.from( document.getElementsByClassName( 'form-item text-input' ) );
+
+console.log( coreInputs );
 
 coreInputs.forEach( coreInput => {
 	coreInput.addEventListener( 'focusin', event => handleCoreInputFocusIn( event ) );
