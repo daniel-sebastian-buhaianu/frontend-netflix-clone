@@ -1,0 +1,178 @@
+/* =============== NAVBAR ===============*/
+
+.navbar, 
+.navbar-item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.navbar-item #browse {
+	display: none;
+	position: relative;
+}
+
+.navbar-item #browse > p {
+	font-weight: bold;
+	color: rgb(229,9,20);
+	cursor: pointer;
+}
+
+.navbar-item #browse > .container {
+	display: none;
+	position: absolute;
+	background: url('browse_menu_background.png') no-repeat;
+	background-position: -13px 0;
+	width: 300px;
+}
+
+.navbar-item #browse > .container > ul {
+	margin-top: 2rem;
+	margin-bottom: 0.5rem;
+	padding: 0 1rem;
+	font-size: 0.9em;
+} 
+
+.navbar-item #browse > .container > ul:first-child {
+	border: 1px solid white;
+	border-left: 0;
+	border-top: 0;
+	border-bottom: 0;
+	padding-right: 2rem;
+	font-weight: bold;
+}
+
+.navbar-item #profile {
+	position: relative;
+	display: none;
+	justify-content: space-between;
+	align-items: center;
+	cursor: pointer;
+	width: 95px;
+}
+
+.navbar-item #profile > .container {
+	position: absolute;
+	top: 30px;
+	left: -75px;
+	display: none;
+	flex-direction: column;
+	background: url('profile_menu_background.png') no-repeat;
+	background-position: 50% 0;
+}
+
+.navbar-item #profile > .container > ul {
+	font-size: 0.9em;
+	padding: 0 1rem;
+} 
+
+.navbar-item #profile > .container > ul:first-child {
+	border: 1px solid white;
+	border-left: 0;
+	border-top: 0;
+	border-right: 0;
+	margin-top: 1.5rem;
+	margin-left: 1rem;
+	padding: 0;
+	padding-bottom: 0.5rem;
+	width: 130px;
+} 
+
+.navbar-item.first {
+	width: 150px;
+}
+
+@media (min-width: 801px) {
+	.navbar-item.first {
+		width: 250px;
+	}
+
+	.navbar-item.first > .hamburger-icon {
+		display: none;
+	}
+
+	.navbar-item #browse {
+		display: block;
+	}
+
+	.navbar-item #profile {
+		display: flex;	
+	}
+}
+
+.navbar-item.second {
+	width: 115px;
+}
+
+@media (min-width: 501px) {
+	.navbar-item.second {
+		width: 175px;
+	}
+}
+
+@media (min-width: 801px) {
+	.navbar-item.second {
+		width: 305px;
+	}
+}
+
+@media (min-width: 1101px) {
+	.navbar-item.second {
+		width: 385px;
+	}
+}
+
+.navbar-item.second > input {
+	width: 100%;
+	padding: 0.25rem 0.5rem;
+	border: 1px solid white;
+	background-color: #201f1f;
+	color: white;
+	font-size: 16px;
+}
+
+@media (min-width: 801px) {
+	.navbar-item.second > input {
+		width: 175px;
+	}
+}
+
+@media (min-width: 1101px) {
+	.navbar-item.second > input {
+		width: 250px;
+	}
+}
+
+
+
+/* =============== HAMBURGER ICON ===============*/
+
+.hamburger-icon {
+	width: 25px;
+	height: 25px;
+	cursor: pointer;
+}
+
+/* =============== LOGO ===============*/
+
+.logo {
+	color: rgb(229,9,20);
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.logo:hover {
+	text-decoration: none;
+}
+
+@media (min-width: 801px) {
+	.logo {
+		font-size: 32px;
+	}
+}
+
+/* =============== D-BLOCK ===============*/
+
+.d-block {
+	display: block;
+}
