@@ -21,7 +21,7 @@
 .navbar-item #browse > .container {
 	display: none;
 	position: absolute;
-	background: url('browse_menu_background.png') no-repeat;
+	background: url('images/browse_menu_background.png') no-repeat;
 	background-position: -13px 0;
 	width: 300px;
 }
@@ -57,7 +57,7 @@
 	left: -75px;
 	display: none;
 	flex-direction: column;
-	background: url('profile_menu_background.png') no-repeat;
+	background: url('images/profile_menu_background.png') no-repeat;
 	background-position: 50% 0;
 }
 
@@ -147,10 +147,78 @@
 
 /* =============== HAMBURGER ICON ===============*/
 
-.hamburger-icon {
+#hamburger-icon {
 	width: 25px;
 	height: 25px;
 	cursor: pointer;
+}
+
+/* =============== SIDE NAV ===============*/
+
+#side-nav-wrapper {
+	z-index: 1;
+	position: absolute;
+	left: 0;
+	width: 0;
+	background-color: #00000063;
+}
+
+#side-nav-wrapper.active {
+	width: 100%;
+}
+
+#side-nav {
+	z-index: 2;
+	position: absolute;
+	left: 0;
+	background-color: black;
+	width: 0;
+	overflow: hidden;
+	transition: all 0.1s ease-in;
+}
+
+#side-nav.active {
+	width: 250px;
+}
+
+#side-nav ul {
+	padding-bottom: 1rem;
+}
+
+#side-nav ul:first-child {
+	border: 1px solid #ffffff38;
+	border-left: 0;
+	border-top: 0;
+	border-right: 0;
+}
+
+#side-nav ul li {
+	display: flex;
+	align-items: center;
+	margin-left: 1rem;
+}
+
+#side-nav ul li.active {
+	border: 2px solid rgb(229,9,20);
+	border-top: 0;
+	border-right: 0;
+	border-bottom: 0;
+	margin-left: 1px;
+	padding-left: 0.9rem;
+}
+
+#side-nav ul li.active > * {
+	color: white;
+}
+
+#side-nav ul li > * {
+	color: #ffffff8f;
+	font-weight: bold;
+	font-size: 0.9em;
+}
+
+#side-nav > ul > li > p {
+	margin-left: 10px;
 }
 
 /* =============== LOGO ===============*/
@@ -171,8 +239,21 @@
 	}
 }
 
-/* =============== D-BLOCK ===============*/
+/* =============== CAROUSEL ===============*/
 
-.d-block {
-	display: block;
+.carousel {
+	display: flex;
+	flex-wrap: nowrap;
+	overflow: scroll;
+	scroll-behavior: smooth;
+	z-index: 0;
+}
+
+.carousel-item {
+	margin-top: 0.5rem;
+}
+
+.carousel-item img {
+	width: 160px;
+	height: 100px;
 }

@@ -37,6 +37,7 @@ body {
 
 header {
 	padding: 1rem;
+	position: relative;
 }
 
 @media (min-width: 501px) {
@@ -50,3 +51,16 @@ header {
 		padding: 1rem 3rem;
 	}
 }
+
+/* =============== CATEGORY SECTIONS ===============*/
+
+section.category {
+	padding-left: 1rem;
+	margin-bottom: 1rem;
+
+}
+
+section.category > h3 {
+	color: #ffffff8f;
+}
+

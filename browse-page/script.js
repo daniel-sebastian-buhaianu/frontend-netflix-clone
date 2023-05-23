@@ -1,3 +1,35 @@
+const onDOMContentLoaded = () => {
+
+	window.addEventListener( 'DOMContentLoaded', () => {
+
+		setSideNavWrapperHeight();
+
+	});
+
+	const setSideNavWrapperHeight = () => {
+
+		const body = document.querySelector( 'body' );
+		const sideNavWrapper = document.getElementById( 'side-nav-wrapper' );
+
+		sideNavWrapper.style.height = body.scrollHeight + 'px';
+	}
+}
+
+const SideNav = () => {
+
+	const hamburgerIcon = document.getElementById( 'hamburger-icon' );
+	
+	hamburgerIcon.addEventListener( 'click', () => {
+
+		const sideNavWrapper = document.getElementById('side-nav-wrapper');
+		const sideNav = document.getElementById('side-nav');
+
+		sideNavWrapper.classList.toggle( 'active' );
+		sideNav.classList.toggle( 'active' );
+
+	});
+}
+
 const BrowseMenu = () => {
 
 	const browse = document.getElementById( 'browse' );
@@ -33,6 +65,10 @@ const ProfileMenu = () => {
 		}
 	}
 };
+
+onDOMContentLoaded();
+
+SideNav();
 
 BrowseMenu();
 
