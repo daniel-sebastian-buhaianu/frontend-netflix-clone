@@ -24,6 +24,7 @@
 	background: url('images/browse_menu_background.png') no-repeat;
 	background-position: -13px 0;
 	width: 300px;
+	z-index: 2;
 }
 
 .navbar-item #browse > .container > ul {
@@ -59,11 +60,14 @@
 	flex-direction: column;
 	background: url('images/profile_menu_background.png') no-repeat;
 	background-position: 50% 0;
+	z-index: 2;
+
 }
 
 .navbar-item #profile > .container > ul {
 	font-size: 0.9em;
 	padding: 0 1rem;
+	padding-bottom: 0.5rem;
 } 
 
 .navbar-item #profile > .container > ul:first-child {
@@ -87,7 +91,7 @@
 		width: 250px;
 	}
 
-	.navbar-item.first > .hamburger-icon {
+	.navbar-item.first > #hamburger-icon {
 		display: none;
 	}
 
@@ -242,18 +246,89 @@
 /* =============== CAROUSEL ===============*/
 
 .carousel {
-	display: flex;
-	flex-wrap: nowrap;
-	overflow: scroll;
+	overflow: auto;
 	scroll-behavior: smooth;
 	z-index: 0;
+	padding-bottom: 2rem;
+	white-space: nowrap;
+	position: relative;
 }
 
 .carousel-item {
+	display: inline-block;
+	width: 47%;
 	margin-top: 0.5rem;
 }
 
+@media (min-width: 501px) {
+	.carousel-item {
+		width: 30%;
+	}
+}
+
+@media (min-width: 801px) {
+	.carousel-item {
+		width: 23.5%;
+	}
+
+	.carousel-item:last-child {
+		padding-right: calc( 100% - 4*23.5% - 1rem );
+	}
+}
+
+@media (min-width: 1101px) {
+	.carousel-item {
+		width: 18.5%;
+	}
+
+	.carousel-item:last-child {
+		padding-right: calc( 100% - 5*18.5% - 1.5rem );
+	}
+}
+
+@media (min-width: 1401px) {
+	.carousel-item {
+		width: 15.5%;
+	}
+
+	.carousel-item:last-child {
+		padding-right: calc( 100% - 6*15.5% - 2rem );
+	}
+}
+
 .carousel-item img {
-	width: 160px;
-	height: 100px;
+	width: 100%;
+	height: auto;
+}
+
+/* =============== CAROUSEL SHADOW ===============*/
+
+.carousel-shadow {
+	position: absolute;
+	display: none;
+	background-color: #0006;
+	z-index: 1;
+	right: 0;
+	top: 1.9rem;
+}
+
+@media (min-width: 801px) {
+	.carousel-shadow {
+		display: inline-block;
+		width: calc( 100% - 4*23.5% - 1rem );
+		height: 70%;
+	}
+}
+
+@media (min-width: 1101px) {
+	.carousel-shadow {
+		width: calc( 100% - 5*18.5% - 1.5rem );
+	}
+}
+
+@media (min-width: 1401px) {
+	.carousel-shadow {
+		width: calc( 100% - 6*15.5% - 2rem );
+		height: 75%;
+	}
 }
