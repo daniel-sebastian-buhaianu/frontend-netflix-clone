@@ -4,7 +4,7 @@ Front-End Development Project:
 
 - practicing my HTML, CSS and JavaScript skills by recreating a couple of Netflix's pages.
 
-Landing Page: https://dsb99.app/netflix/landing-page
+Landing Page: https://dsb99.app/netflix
 
 Sign In Page: https://dsb99.app/netflix/sign-in
 
