@@ -1,4 +1,4 @@
-# Netflix
+# netflix-clone
 
 Front-End Development Project:
 
